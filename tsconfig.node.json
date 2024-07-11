@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "composite": true,
+    "skipLibCheck": true,
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "target": "ESNext"
+  },
+  "include": ["src", "src/lib.d.ts"],
+  "references": [{ "path": "./tsconfig.json" }]
+}
+
