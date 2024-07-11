@@ -1,7 +1,8 @@
+import Favicon from './../../assets/images/logo/Group 1.png';
 const Loader = () => {
   return (
     <div className="flex h-screen items-center justify-center bg-white">
-      <div className="h-16 w-16 animate-spin rounded-full border-4 border-solid border-yellow-600 border-t-transparent"></div>
+      <img src={Favicon} alt="logo" />
     </div>
   );
 };

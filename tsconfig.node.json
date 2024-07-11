@@ -1,4 +1,5 @@
 {
+  "extends": "./tsconfig.json",
   "compilerOptions": {
     "composite": true,
     "skipLibCheck": true,
@@ -7,8 +8,11 @@
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "target": "ESNext"
+    // Add any additional compiler options from tsconfig.json if needed
   },
-  "include": ["src", "src/lib.d.ts"],
-  "references": [{ "path": "./tsconfig.json" }]
+  "include": [
+    "vite.config.ts"
+    // Add any additional files to include if needed
+  ]
 }
 
