@@ -1,63 +1,64 @@
 import React from 'react';
-import { COMMENTS } from '../../types/comments'; // Adjust import path as per your project structure
+import { COMMENTS } from '../../types/comments'; // Assuming you have defined COMMENTS type
 
 const commentsData: COMMENTS[] = [
   {
-    avatar: '/avatar/Havard University.jpeg',
+    avatar: './avatar/Havard University.jpeg',
     userName: 'havarduni',
     content: 'We are happy to join you in the advocacy programme.',
     post: ''
   },
   {
-    avatar: '/avatar/🖤.jpeg',
+    avatar: './avatar/🖤.jpeg',
     userName: 'kendricklamar',
     content: 'They not like us',
     post: '',
   },
   {
-    avatar: '/avatar/Kylie Jenner has just launched her first eyeshadow palette.jpeg',
+    avatar: './avatar/Kylie Jenner has just launched her first eyeshadow palette.jpeg',
     userName: 'kyliejenner',
     content: 'How much is this?',
     post: '',
   },
   {
-    avatar: '/avatar/Pan-African Masquerade_ William Ruto with the Mask Off - Africa Interest.jpeg',
+    avatar: './avatar/Pan-African Masquerade_ William Ruto with the Mask Off - Africa Interest.jpeg',
     userName: 'williamruto',
     content: 'I applaud all Genz',
     post: '',
   },
   {
-    avatar: '/avatar/Drake Instagram photo sparks fake abs surgery rumor.jpeg',
+    avatar: './avatar/Drake Instagram photo sparks fake abs surgery rumor.jpeg',
     userName: 'Drake',
     content: 'I bow down to Kendrik',
     post: '',
   },
-    {
-    avatar: '/avatar/Havard University.jpeg',
+
+  {
+    avatar: './avatar/Havard University.jpeg',
     userName: 'havarduni',
     content: 'We are happy to join you in the advocacy programme.',
     post: ''
   },
   {
-    avatar: '/avatar/🖤.jpeg',
+    avatar: './avatar/🖤.jpeg',
     userName: 'kendricklamar',
     content: 'They not like us',
     post: '',
   },
   {
-    avatar: '/avatar/Kylie Jenner has just launched her first eyeshadow palette.jpeg',
+    avatar: './avatar/Kylie Jenner has just launched her first eyeshadow palette.jpeg',
     userName: 'kyliejenner',
     content: 'How much is this?',
     post: '',
   },
   {
-    avatar: '/avatar/Pan-African Masquerade_ William Ruto with the Mask Off - Africa Interest.jpeg',
+    avatar: './avatar/Pan-African Masquerade_ William Ruto with the Mask Off - Africa Interest.jpeg',
     userName: 'williamruto',
     content: 'I applaud all Genz',
     post: '',
   },
   {
-    avatar: '/avatar/Drake Instagram photo sparks fake abs surgery rumor.jpeg',
+    avatar: './avatar/Drake Instagram photo sparks fake abs surgery rumor.jpeg',
     userName: 'Drake',
     content: 'I bow down to Kendrik',
     post: '',
@@ -82,7 +83,7 @@ const TableOne: React.FC = () => {
           >
             {/* Avatar */}
             <img
-              src={process.env.PUBLIC_URL + comment.avatar} // Assuming images are in public folder
+              src= {comment.avatar} // Use default avatar if avatar is not available
               alt="Avatar"
               className="h-10 w-10 rounded-full object-cover"
             />
@@ -100,4 +101,3 @@ const TableOne: React.FC = () => {
 };
 
 export default TableOne;
-
