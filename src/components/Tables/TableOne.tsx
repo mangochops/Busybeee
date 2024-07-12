@@ -1,96 +1,70 @@
-import { BRAND } from '../../types/brand';
-import BrandOne from '../../images/brand/brand-01.svg';
-import BrandTwo from '../../images/brand/brand-02.svg';
-import BrandThree from '../../images/brand/brand-03.svg';
-import BrandFour from '../../images/brand/brand-04.svg';
-import BrandFive from '../../images/brand/brand-05.svg';
-import {COMMENTS} from '../../types/comments'
+import React from 'react';
+import { COMMENTS } from '../../types/comments'; // Adjust import path as per your project structure
 
-const brandData: BRAND[] = [
-  {
-    logo: BrandOne,
-    name: 'Google',
-    visitors: 3.5,
-    revenues: '5,768',
-    sales: 590,
-    conversion: 4.8,
-  },
-  {
-    logo: BrandOne,
-    name: 'Google',
-    visitors: 3.5,
-    revenues: '5,768',
-    sales: 590,
-    conversion: 4.8,
-  },
-  {
-    logo: BrandTwo,
-    name: 'Twitter',
-    visitors: 2.2,
-    revenues: '4,635',
-    sales: 467,
-    conversion: 4.3,
-  },
-  {
-    logo: BrandThree,
-    name: 'Github',
-    visitors: 2.1,
-    revenues: '4,290',
-    sales: 420,
-    conversion: 3.7,
-  },
-  {
-    logo: BrandFour,
-    name: 'Vimeo',
-    visitors: 1.5,
-    revenues: '3,580',
-    sales: 389,
-    conversion: 2.5,
-  },
-  {
-    logo: BrandFive,
-    name: 'Facebook',
-    visitors: 3.5,
-    revenues: '6,768',
-    sales: 390,
-    conversion: 4.2,
-  },
-];
 const commentsData: COMMENTS[] = [
   {
-    avatar: '',
-    userName: 'ntvKenya',
+    avatar: '/avatar/Havard University.jpeg',
+    userName: 'havarduni',
     content: 'We are happy to join you in the advocacy programme.',
     post: ''
   },
   {
-    avatar: '',
+    avatar: '/avatar/🖤.jpeg',
     userName: 'kendricklamar',
     content: 'They not like us',
     post: '',
   },
   {
-    avatar: '',
+    avatar: '/avatar/Kylie Jenner has just launched her first eyeshadow palette.jpeg',
     userName: 'kyliejenner',
     content: 'How much is this?',
     post: '',
   },
   {
-    avatar: '',
+    avatar: '/avatar/Pan-African Masquerade_ William Ruto with the Mask Off - Africa Interest.jpeg',
+    userName: 'williamruto',
+    content: 'I applaud all Genz',
+    post: '',
+  },
+  {
+    avatar: '/avatar/Drake Instagram photo sparks fake abs surgery rumor.jpeg',
+    userName: 'Drake',
+    content: 'I bow down to Kendrik',
+    post: '',
+  },
+    {
+    avatar: '/avatar/Havard University.jpeg',
+    userName: 'havarduni',
+    content: 'We are happy to join you in the advocacy programme.',
+    post: ''
+  },
+  {
+    avatar: '/avatar/🖤.jpeg',
+    userName: 'kendricklamar',
+    content: 'They not like us',
+    post: '',
+  },
+  {
+    avatar: '/avatar/Kylie Jenner has just launched her first eyeshadow palette.jpeg',
     userName: 'kyliejenner',
     content: 'How much is this?',
     post: '',
   },
   {
-    avatar: '',
-    userName: 'kyliejenner',
-    content: 'How much is this?',
+    avatar: '/avatar/Pan-African Masquerade_ William Ruto with the Mask Off - Africa Interest.jpeg',
+    userName: 'williamruto',
+    content: 'I applaud all Genz',
     post: '',
   },
+  {
+    avatar: '/avatar/Drake Instagram photo sparks fake abs surgery rumor.jpeg',
+    userName: 'Drake',
+    content: 'I bow down to Kendrik',
+    post: '',
+  },
+];
 
-]
-
-const TableOne = () => {
+const TableOne: React.FC = () => {
   return (
     <div className="rounded-sm border border-stroke bg-white px-5 pt-6 pb-2.5 shadow-default dark:border-strokedark dark:bg-boxdark sm:px-7.5 xl:pb-1">
       <h4 className="mb-6 text-xl font-semibold text-black dark:text-white">
@@ -98,39 +72,25 @@ const TableOne = () => {
       </h4>
 
       <div className="flex flex-col">
-{/* Map the comments from each account */}
-        {brandData.map((brand, key) => (
+        {/* Map through commentsData */}
+        {commentsData.map((comment, key) => (
           <div
-            className={`grid grid-cols-3 sm:grid-cols-5 ${
-              key === brandData.length - 1
-                ? ''
-                : 'border-b border-stroke dark:border-strokedark'
-            }`}
             key={key}
+            className={`flex items-center ${
+              key !== 0 ? 'mt-4' : '' // Add margin top for all except the first item
+            }`}
           >
-            <div className="flex items-center gap-3 p-2.5 xl:p-5">
-              <div className="flex-shrink-0">
-                <img src={brand.logo} alt="Brand" />
-              </div>
-              <p className="hidden text-black dark:text-white sm:block">
-                {brand.name}
-              </p>
-            </div>
+            {/* Avatar */}
+            <img
+              src={process.env.PUBLIC_URL + comment.avatar} // Assuming images are in public folder
+              alt="Avatar"
+              className="h-10 w-10 rounded-full object-cover"
+            />
 
-            <div className="flex items-center justify-center p-2.5 xl:p-5">
-              <p className="text-black dark:text-white">{brand.visitors}K</p>
-            </div>
-
-            <div className="flex items-center justify-center p-2.5 xl:p-5">
-              <p className="text-meta-3">${brand.revenues}</p>
-            </div>
-
-            <div className="hidden items-center justify-center p-2.5 sm:flex xl:p-5">
-              <p className="text-black dark:text-white">{brand.sales}</p>
-            </div>
-
-            <div className="hidden items-center justify-center p-2.5 sm:flex xl:p-5">
-              <p className="text-meta-5">{brand.conversion}%</p>
+            {/* Username and Comment */}
+            <div className="ml-3">
+              <p className="text-sm font-medium text-gray-900">{comment.userName}</p>
+              <p className="text-sm text-gray-700">{comment.content}</p>
             </div>
           </div>
         ))}
@@ -140,3 +100,4 @@ const TableOne = () => {
 };
 
 export default TableOne;
+

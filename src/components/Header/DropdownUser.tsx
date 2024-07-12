@@ -90,7 +90,7 @@ const DropdownUser = () => {
                     fill=""
                   />
                 </svg>
-                My Contacts
+                Help
               </Link>
             </li>
             <li>

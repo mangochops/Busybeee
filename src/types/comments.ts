@@ -1,4 +1,4 @@
-export type COMMENTS = {
+export type COMMENTS= {
   avatar: string;
   userName: string;
   content: string;

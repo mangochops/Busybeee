@@ -1,4 +1,4 @@
-import Favicon from './../../assets/images/logo/Group 1.png';
+import Favicon from './Frame 1.png';
 const Loader = () => {
   return (
     <div className="flex h-screen items-center justify-center bg-white">
