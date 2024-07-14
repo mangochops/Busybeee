@@ -59,7 +59,7 @@ const Billing: React.FC = () => {
               className="bg-boxdark rounded-lg shadow-lg p-6 flex flex-col justify-between"
             >
               <div>
-                <h3 className="text-xl font-bold mb-2 align-center text-white">{pkg.name}</h3>
+                <h3 className="text-xl font-bold mb-2 text-center text-white">{pkg.name}</h3>
                 <p className="text-gray-600 mb-4">{pkg.description}</p>
                 <ul className="mb-4">
                   {pkg.features.map((feature, idx) => (
@@ -81,7 +81,7 @@ const Billing: React.FC = () => {
                 </ul>
               </div>
               <div className="mt-auto text-center">
-                <p className="text-lg font-semibold">ksh{pkg.price}/month</p>
+                <p className="text-lg font-semibold">ksh. {pkg.price} /month</p>
                 <button className="mt-4 px-6 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none">
                   Select Package
                 </button>

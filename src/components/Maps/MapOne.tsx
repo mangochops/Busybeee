@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import moment from 'moment'; // For date formatting
 import Post1 from './../../posts/_The best time to buy life insurance was yesterday, the next best time is today__.jpeg'
 import Post2 from './../../posts/black lives matter riots 2020 george floyd protests say their names.jpeg'
 import Post3 from './../../posts/BMW X6.jpeg'
